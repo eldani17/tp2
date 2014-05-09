@@ -8,6 +8,9 @@ package ar.edu.untdf.ventanas;
  *
  * @author DAndrade
  */
-public class Sistema {
-    
+public class Aplicacion {
+    public static void main(String[] args) {
+        Principal venPrincipal = new Principal();
+        venPrincipal.setVisible(true);
+    }
 }

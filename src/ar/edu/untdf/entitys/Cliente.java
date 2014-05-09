@@ -8,10 +8,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 /**
@@ -26,7 +28,46 @@ public class Cliente implements Serializable {
     private Long id;
     private String nombre;
     private String apellido;
-    @OneToMany(mappedBy="cliente")
+    @Column(name = "dni")
+    private Long dni;
+    /*private String direccion;
+    private String telefono;
+    private String email;
+    */
+    public Long getDni() {
+        return dni;
+    }
+
+    public void setDni(Long dni) {
+        this.dni = dni;
+    }
+/*
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    */
+    /*@OneToMany(mappedBy="cliente")
     private List<Ticket> tickets;
 
     public List<Ticket> getTickets() {
@@ -36,13 +77,9 @@ public class Cliente implements Serializable {
     public void setTickets(List<Ticket> tickets) {
         this.tickets = tickets;
     }
-    
+    */
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
     
     public String getNombre() {

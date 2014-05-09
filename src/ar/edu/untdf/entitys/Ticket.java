@@ -23,8 +23,7 @@ public class Ticket implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nombre;
-    @ManyToOne
-    @JoinColumn(name="id_cliente")
+    /*@ManyToOne
     private Cliente cliente;
 
     public Cliente getCliente() {
@@ -34,7 +33,7 @@ public class Ticket implements Serializable {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-
+*/
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
